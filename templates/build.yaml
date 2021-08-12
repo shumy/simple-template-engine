@@ -1,0 +1,9 @@
+#config(vars.conf)
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: #var(app)-#var(env)-secret
+type: kubernetes.io/basic-auth
+stringData:
+  #include(secret.yaml)
